@@ -28,115 +28,73 @@ if (isset($_SESSION["usu_id"])) {
         <!-- Contenido -->
         <div class="page-content">
             <div class="container-fluid">
-                <section class="activity-line">
-                    <article class="activity-line-item box-typical">
-                        <div class="activity-line-date">
-                            Tuesday<br />
-                            sep 9
-                        </div>
-                        <header class="activity-line-item-header">
-                            <div class="activity-line-item-user">
-                                <div class="activity-line-item-user-photo">
-                                    <a href="#">
-                                        <img src="img/photo-64-2.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="activity-line-item-user-name">Tim Colins</div>
-                                <div class="activity-line-item-user-status">Developer, Palo Alto</div>
+
+                <header class="section-header">
+                    <div class="tbl">
+                        <div class="tbl-row">
+                            <div class="tbl-cell">
+                                <h3 id="lblnumticket"></h3>
+                                <span  id="lblestado">Cerrado</span>
+                                <span class="label label-pill label-primary" id="lblnomusuario"></span>
+                                <span class="label label-pill label-default" id="lblfechcrea">99/99/9999</span>
+                                <ol class="breadcrumb breadcrumb-simple">
+                                    <li><a href="#">Home</a></li>
+                                    <li class="active">Detalle Ticket</li>
+                                </ol>
                             </div>
-                        </header>
-                        <div class="activity-line-action-list">
-                            <section class="activity-line-action">
-                                <div class="time">10:40 AM</div>
-                                <div class="cont">
-                                    <div class="cont-in">
-                                        <p>Uploaded 3 Images to Daily UI Album</p>
-                                        <ul class="previews">
-                                            <li>
-                                                <a class="fancybox" rel="gall-1" href="img/pic.jpg"> <img src="http://via.placeholder.com/120" alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="fancybox" rel="gall-1" href="img/pic.jpg"> <img src="http://via.placeholder.com/120" alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="fancybox" rel="gall-1" href="img/pic.jpg"> <img src="http://via.placeholder.com/120" alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="fancybox" rel="gall-1" href="img/pic.jpg"> <img src="http://via.placeholder.com/120" alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="fancybox" rel="gall-1" href="img/pic.jpg"> <img src="http://via.placeholder.com/120" alt="" />
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <ul class="meta">
-                                            <li><a href="#">5 Comments</a></li>
-                                            <li><a href="#">5 Likes</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section>
-                            <!--.activity-line-action-->
-                            <section class="activity-line-action">
-                                <div class="time">10:40 AM</div>
-                                <div class="cont">
-                                    <div class="cont-in">
-                                        <p>Left a comment to <a href="#">Olga Gozha’s</a> Image</p>
-                                        <div class="tbl img-comment">
-                                            <div class="tbl-row">
-                                                <div class="tbl-cell tbl-cell-img">
-                                                    <img src="http://via.placeholder.com/120" alt="" />
-                                                </div>
-                                                <div class="tbl-cell tbl-cell-txt">
-                                                    «Had a meeting about shopping cart experience, with Isobel Patterson, Josh Weller»
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <ul class="meta">
-                                            <li><a href="#">5 Comments</a></li>
-                                            <li><a href="#">5 Likes</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section>
-                            <!--.activity-line-action-->
-                            <section class="activity-line-action">
-                                <div class="time">10:40 AM</div>
-                                <div class="cont">
-                                    <div class="cont-in">
-                                        <p>Uploaded 3 files</p>
-                                        <ul class="attach-list">
-                                            <li>
-                                                <i class="font-icon font-icon-page"></i>
-                                                <a href="#">example.avi</a>
-                                            </li>
-                                            <li>
-                                                <i class="font-icon font-icon-page"></i>
-                                                <a href="#">activity.psd</a>
-                                            </li>
-                                            <li>
-                                                <i class="font-icon font-icon-page"></i>
-                                                <a href="#">example.psd</a>
-                                            </li>
-                                        </ul>
-                                        <ul class="meta">
-                                            <li><a href="#">5 Comments</a></li>
-                                            <li><a href="#">5 Likes</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section>
-                            <!--.activity-line-action-->
                         </div>
-                        <!--.activity-line-action-list-->
-                    </article>
-                    <!--.activity-line-item-->
+                    </div>
+                </header>
+
+                <div class="box-typical box-typical-padding">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <fieldset class="form-group">
+                                <label for="cat_nom" class="form-label semibold">Categoría</label>
+                                <input type="text" class="form-control" id="cat_nom" name="cat_nom"  readonly>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset class="form-group">
+                                <label for="tick_titulo" class="form-label semibold">Título</label>
+                                <input type="text" class="form-control" id="tick_titulo" name="tick_titulo"  readonly>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                            <fieldset class="form-group">
+                                <label class="form-label semibold" for="tickd_descripx">Descripción</label>
+                                    <div class="summernote-theme-1">
+                                        <textarea name="tickd_descripx" id="tickd_descripx" class="summernote"></textarea>
+                                    </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+
+                <section class="activity-line" id="lbldetalle">
+                    
                 </section>
                 <!--.activity-line-->
+                <div class="box-typical box-typical-padding">
+                    <p>Ingrese su duda o consulta</p>
+                    <div class="row">
+
+                            <div class="col-lg-12">
+                                <fieldset class="form-group">
+                                    <label class="form-label semibold" for="tickd_descrip">Descripción</label>
+                                    <div class="summernote-theme-1">
+                                        <textarea name="tickd_descrip" id="tickd_descrip" class="summernote"></textarea>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="button" id="btnenviar" class="btn btn-rounded btn-inline btn-primary">Enviar</button>
+                                <button type="submit" id="btncerrarticket" class="btn btn-rounded btn-inline btn-danger">Cerrar Ticket</button>
+                            </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 

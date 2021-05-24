@@ -20,3 +20,5 @@
 			});
 		});
 	</script>
+
+	<script src="../../public/js/summernote-ES.js"></script>
